@@ -23,3 +23,17 @@ docker rm -f django_postgres       # force stop + remove
 
 docker ps                          # running containers (shows name + ID)
 docker ps -a                       # all containers (including stopped)
+
+
+docker rmi postgres:15             # by name:tag
+docker rmi a1b2c3d4e5f6            # by ID
+If a container is still using the image:
+
+
+docker rmi -f postgres:15          # force remove
+Useful commands:
+
+
+docker images                      # list all images
+docker image prune                 # remove unused/dangling images
+docker image prune -a              # remove ALL unused images (not just dangling)
