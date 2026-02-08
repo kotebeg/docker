@@ -11,7 +11,7 @@ docker stop my_container
 # 🧹 2. Remove the Container
 docker rm <container_id_or_name>
 
-
+docker compose down only affects containers defined in the docker-compose.yml in the current directory.
 docker compose down        # stops AND removes containers
 docker compose stop        # stops only, keeps container
 
